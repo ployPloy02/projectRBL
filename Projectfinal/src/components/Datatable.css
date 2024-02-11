@@ -1,34 +1,38 @@
 .table-container {
-  width: 100%; /* กำหนดความกว้างของตาราง */
-  margin: 20px auto; /* จัดตำแหน่งตารางตรงกลาง */
+  width: 90rcap; /* ตารางเต็มหน้าจอ */
   border-collapse: collapse; /* รวมเส้นขอบเข้าด้วยกัน */
-  
+  border: 1px solid #ffffff; /* เส้นขอบตารางสีขาว */
 }
 
 .table-container th, .table-container td {
-  border: 1px solid #ffffff; /* เส้นขอบตารางสีขาว */
-  padding: 8px; /* ระยะห่างของข้อความจากขอบ */
+  border: 1px solid #fff; /* เส้นขอบตารางสีขาว */
+  padding: 10px; /* ระยะห่างของข้อความจากขอบ */
+  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
 }
 
 .table-container th {
   background-color: #f0f0f0; /* สีเทาสลับเท่าอ่อน */
-  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
 }
 
 .table-container td {
+  background-color: #e6e6e635; /* สีเทาสลับเท่าเข้ม */
+  
+}
+
+
+.btn {
+  display: block; /* แสดงปุ่มเป็น block element */
+  margin: 20px auto; /* จัดตำแหน่งปุ่มตรงกลาง */
+  padding: 10px 20px; /* กำหนดระยะห่างของข้อความจากขอบปุ่ม */
+  background-color: #008CBA; /* สีน้ำเงิน */
+  color: #fff; /* สีของตัวอักษร */
+  text-decoration: none; /* ไม่มีการเส้นใต้ข้อความ */
+  border-radius: 5px; /* กำหนดรูปร่างของมุมปุ่ม */
   text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
 }
 
-.btn {
-  display: block; 
-  width: 100px; 
-  margin: 20px auto; 
-  padding: 10px 20px; 
-  background-color: #154a5c; 
-  color: #632525; 
-  text-decoration: none; 
-  border-radius: 5px; 
-  text-align: center; 
+.logo {
+  position: absolute; /* ตั้งตำแหน่งแบบแน่นอน */
+  top: 20px; /* ระยะห่างด้านบนของโลโก้ */
+  left: 20px; /* ระยะห่างด้านซ้ายของโลโก้ */
 }
-
-
