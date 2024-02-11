@@ -19,7 +19,7 @@ def getCheckOk():
 # Endpoint to fetch data from the database
 @app.route('/data', methods=['GET'])
 def get_data():
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM mytable")  # Replace 'your_table_name' with your actual table name
     rows = cursor.fetchall()
@@ -43,7 +43,7 @@ def get_data():
 
 @app.route('/log', methods=['GET'])
 def getLog():
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Log")  # Replace 'your_table_name' with your actual table name
     rows = cursor.fetchall()
@@ -114,7 +114,7 @@ def save_data():
         name = data.get('name').split(",")[0].split(":")[1]
         course = data.get('name').split(",")[1].split(":")[1]
         # card = data.get('card')
-        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/Project/SQL/mydatabase.db')
+        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
         cursor = conn.cursor()
 
         # Check if the data already exists in the database
@@ -158,7 +158,7 @@ def testSave():
     # cardID = request.args.get('cardID')
     response_data = {'data1': data1, 'data2': date}
 
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
     cursor = conn.cursor()
     cursor.execute('INSERT INTO Log (Date, Name) VALUES (?, ?)', (date, data1))
     conn.commit()
@@ -171,7 +171,7 @@ def testSave():
 @app.route('/testCount', methods=['GET'])
 def testCount():
     try:
-        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/Project/SQL/mydatabase.db')
+        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM mytable WHERE name = 'ploy'")
         data = cursor.fetchall()
