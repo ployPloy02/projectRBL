@@ -1,0 +1,38 @@
+
+
+.table-container {
+  width: 100%; /* กำหนดความกว้างของตาราง */
+  margin: 20px auto; /* จัดตำแหน่งตารางตรงกลาง */
+  border-collapse: collapse; /* รวมเส้นขอบเข้าด้วยกัน */
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #fff; /* เส้นขอบตารางสีขาว */
+  padding: 8px; /* ระยะห่างของข้อความจากขอบ */
+}
+
+.table-container th {
+  background-color: #f0f0f0; /* สีเทาสลับเท่าอ่อน */
+  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
+}
+
+.table-container td {
+  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
+}
+
+.btn {
+  display: block; /* แสดงปุ่มเป็น block element */
+  width: 100px; /* กำหนดความกว้างของปุ่ม */
+  margin: 20px auto; /* จัดตำแหน่งปุ่มตรงกลาง */
+  padding: 10px 20px; /* กำหนดระยะห่างของข้อความจากขอบปุ่ม */
+  background-color: #154a5c; /* สีน้ำเงิน */
+  color: #632525; /* สีของตัวอักษร */
+  text-decoration: none; /* ไม่มีการเส้นใต้ข้อความ */
+  border-radius: 5px; /* กำหนดรูปร่างของมุมปุ่ม */
+  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
+}
+
+.logo {
+  width: 100px; /* ปรับขนาดของโลโก้ตามที่ต้องการ */
+  margin-top: 20px; /* ระยะห่างด้านบนของโลโก้ */
+}

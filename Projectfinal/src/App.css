@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 1em;
+  background-color: #f0f0f0; /* กำหนดสีพื้นหลังของการ์ด */
+}
+
+.card h1 {
+  color: #333; /* กำหนดสีข้อความภายในการ์ด */
+}
+
+.card button {
+  background-color: #4CAF50; /* กำหนดสีพื้นหลังของปุ่ม */
+  color: white; /* กำหนดสีข้อความของปุ่ม */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background-color: #45a049; /* กำหนดสีพื้นหลังของปุ่มเมื่อเมาส์ไฮไลต์ */
+}
