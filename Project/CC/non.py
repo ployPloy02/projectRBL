@@ -61,7 +61,8 @@ def getLog():
 
     return jsonify({'data': data_list})
 
-    
+#Test Ploy
+
 # ==================== Noted ====================
 # @app.route('/saveDate', methods=['POST'])
 # def saveDate():
