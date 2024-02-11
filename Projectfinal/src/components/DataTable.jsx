@@ -30,9 +30,10 @@ const DataTable = () => {
         <thead>
           <tr>
             <th>Date</th>
-            <th>Nickname</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Level</th>
             <th>Course</th>
-            {/* เพิ่มหัวข้อตารางเพิ่มเติมตามความต้องการ */}
           </tr>
         </thead>
         <tbody>
@@ -41,7 +42,9 @@ const DataTable = () => {
               <td>{item.id}</td>
               <td>{item.column1}</td>
               <td>{item.column2}</td>
-              {/* <td>{item.column3 || 'N/A' }</td> */}
+              <td>{item.column3}</td>
+              <td>{item.column4 || 'N/A'}</td>
+              {/* <td>{item.column5 || 'N/A'}</td> */}
             </tr>
           ))}
         </tbody>

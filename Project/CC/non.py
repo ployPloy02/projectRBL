@@ -29,13 +29,12 @@ def get_data():
     for row in rows:
         data_dict = {
             'id': row[0],  # Assuming the first column is the ID
-            'column1': row[1],  # Replace with your column names
-            'column2': row[2],  # Replace with your column names
+            'column1': row[1],  
+            'column2': row[2],  
             'column3': row[3],
             'column4': row[4],
             'column5': row[5],
-            'column6': row[6],
-            # Add more columns as needed
+
         }
         data_list.append(data_dict)
 
@@ -52,10 +51,12 @@ def getLog():
     data_list = []
     for row in rows:
         data_dict = {
-            'id': row[0],  # Assuming the first column is the ID
-            'column1': row[1],  # Replace with your column names
-            'column2': row[2],  # Replace with your column names
-            # Add more columns as needed
+            'id': row[0],  
+            'column1': row[1],  
+            'column2': row[2],  
+            'column3': row[3],
+            'column4': row[4],
+            
         }
         data_list.append(data_dict)
 
@@ -114,6 +115,8 @@ def save_data():
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         data = request.json
         name = data.get('name').split(",")[0].split(":")[1]
+        # age = data.get('name').split(",")[0].split(":")[1]
+        # level = data.get('name').split(",")[0].split(":")[1]
         course = data.get('name').split(",")[1].split(":")[1]
         # card = data.get('card')
         conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')

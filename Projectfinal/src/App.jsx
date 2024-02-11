@@ -17,7 +17,7 @@ function App() {
 
   const HomePage = () => (
     <div>
-      <h1>หน้าแรก</h1>
+      <h1>Main</h1>
       <button onClick={() => goToPage('about')}>ไปที่หน้าเกี่ยวกับ</button>
     </div>
   );
