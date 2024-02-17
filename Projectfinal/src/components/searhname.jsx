@@ -1,19 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import Home from './ST'; // Import the Home component
-import NextPage from './App'; // Import the NextPage component
+// import React from 'react';
+// import logo from '../../rbl.jpeg'; 
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/nextpage" component={NextPage} />
-        </Switch>
-      </div>
-    </Router>
-  );
-}
 
-export default App;
+// function Home() {
+//   return (
+//     <div>
+//       {/* <img src={logo} alt="Logo" style={{ width: '390px', height: '390px', marginTop: '-80px' }} /> */}
+//       <h2 style={{ marginLeft: '10px', marginTop: '-50px' }}>Welcome to the Home Page!</h2>
+//     </div>
+//   );
+// }
+
+
+// export default Home;
