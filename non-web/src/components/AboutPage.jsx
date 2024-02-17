@@ -1,11 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
 
 function AboutPage() {
+  const navigate = useNavigate();
+  const goToHomePage = () => navigate('/');
+  const goToDataPage = () => navigate('/datatable');
+  const goTofirstPage = () => navigate('/first');
   return (
     <div>
       <h2>About Page</h2>
-      <Link to="/">Go back to Home</Link>
+      <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
+      <button onClick={goToDataPage} className="link-to-about">Go to data</button>
     </div>
   );
 }

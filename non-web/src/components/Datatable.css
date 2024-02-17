@@ -1,0 +1,56 @@
+h2 {
+  text-align: center; /* ทำให้ข้อความตรงกลาง */
+}
+
+
+.table-container {
+  width: 65rcap; 
+  border-collapse: collapse; 
+  border: 1px solid #ffffff; 
+  margin: 5%;
+  
+}
+
+
+/* กำหนดให้มุมด้านบนซ้ายของตารางเป็นโค้ง */
+.table-container tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* กำหนดให้มุมด้านบนขวาของตารางเป็นโค้ง */
+.table-container tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* กำหนดให้มุมด้านล่างซ้ายของตารางเป็นโค้ง */
+.table-container tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* กำหนดให้มุมด้านล่างขวาของตารางเป็นโค้ง */
+.table-container tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #fff; /* กำหนดเส้นขอบของหัวของตารางและเซลล์ข้อมูลในตารางให้เป็นสีขาว */
+  padding: 10px; /* เพิ่มระยะห่างระหว่างข้อความและเส้นขอบของเซลล์ */
+  text-align: center; /* จัดข้อความไว้กึ่งกลางในเซลล์ */
+
+}
+
+
+
+.table-container th {
+  background-color: #D9D9D9; /* สีเทาสลับเท่าอ่อน */
+}
+
+.table-container tr:nth-child(even) td {
+  background-color: #D9D9D9; /* สลับสีของแถวแนวนอนให้เป็นสีเทาเข้ม */
+}
+
+.table-container tr:nth-child(odd) td {
+  background-color: #F2F2F2; /* สลับสีของแถวแนวนอนให้เป็นสีเทาอ่อน */
+}
+
+
