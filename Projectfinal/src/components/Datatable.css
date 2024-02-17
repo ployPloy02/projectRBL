@@ -1,38 +1,56 @@
+h2 {
+  text-align: center; /* ทำให้ข้อความตรงกลาง */
+}
+
+
 .table-container {
-  width: 90rcap; /* ตารางเต็มหน้าจอ */
-  border-collapse: collapse; /* รวมเส้นขอบเข้าด้วยกัน */
-  border: 1px solid #ffffff; /* เส้นขอบตารางสีขาว */
-}
-
-.table-container th, .table-container td {
-  border: 1px solid #fff; /* เส้นขอบตารางสีขาว */
-  padding: 10px; /* ระยะห่างของข้อความจากขอบ */
-  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
-}
-
-.table-container th {
-  background-color: #f0f0f0; /* สีเทาสลับเท่าอ่อน */
-}
-
-.table-container td {
-  background-color: #e6e6e635; /* สีเทาสลับเท่าเข้ม */
+  width: 65rcap; 
+  border-collapse: collapse; 
+  border: 1px solid #ffffff; 
+  margin: 5%;
   
 }
 
 
-.btn {
-  display: block; /* แสดงปุ่มเป็น block element */
-  margin: 20px auto; /* จัดตำแหน่งปุ่มตรงกลาง */
-  padding: 10px 20px; /* กำหนดระยะห่างของข้อความจากขอบปุ่ม */
-  background-color: #008CBA; /* สีน้ำเงิน */
-  color: #fff; /* สีของตัวอักษร */
-  text-decoration: none; /* ไม่มีการเส้นใต้ข้อความ */
-  border-radius: 5px; /* กำหนดรูปร่างของมุมปุ่ม */
-  text-align: center; /* จัดข้อความตามระดับกึ่งกลาง */
+/* กำหนดให้มุมด้านบนซ้ายของตารางเป็นโค้ง */
+.table-container tr:first-child th:first-child {
+  border-top-left-radius: 10px;
 }
 
-.logo {
-  position: absolute; /* ตั้งตำแหน่งแบบแน่นอน */
-  top: 20px; /* ระยะห่างด้านบนของโลโก้ */
-  left: 20px; /* ระยะห่างด้านซ้ายของโลโก้ */
+/* กำหนดให้มุมด้านบนขวาของตารางเป็นโค้ง */
+.table-container tr:first-child th:last-child {
+  border-top-right-radius: 10px;
 }
+
+/* กำหนดให้มุมด้านล่างซ้ายของตารางเป็นโค้ง */
+.table-container tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* กำหนดให้มุมด้านล่างขวาของตารางเป็นโค้ง */
+.table-container tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #fff; /* กำหนดเส้นขอบของหัวของตารางและเซลล์ข้อมูลในตารางให้เป็นสีขาว */
+  padding: 10px; /* เพิ่มระยะห่างระหว่างข้อความและเส้นขอบของเซลล์ */
+  text-align: center; /* จัดข้อความไว้กึ่งกลางในเซลล์ */
+
+}
+
+
+
+.table-container th {
+  background-color: #D9D9D9; /* สีเทาสลับเท่าอ่อน */
+}
+
+.table-container tr:nth-child(even) td {
+  background-color: #D9D9D9; /* สลับสีของแถวแนวนอนให้เป็นสีเทาเข้ม */
+}
+
+.table-container tr:nth-child(odd) td {
+  background-color: #F2F2F2; /* สลับสีของแถวแนวนอนให้เป็นสีเทาอ่อน */
+}
+
+

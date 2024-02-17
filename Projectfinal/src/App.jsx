@@ -1,49 +1,44 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
 import DataTable from './components/DataTable';
-// import TestGetData from './components/testGetData';
-// import DataTablefull from './components/DataTablefull';
-
-
+import ST from './components/ST';
+import logo from '../rbl.jpeg'; 
 
 function App() {
-  const [count, setCount] = useState(0)
   const [currentPage, setCurrentPage] = useState('home');
-  const goToPage = (page) => {
-    setCurrentPage(page);
-  };
 
   const HomePage = () => (
-    <div>
-      <h1>Main</h1>
-      <button onClick={() => goToPage('about')}>ไปที่หน้าเกี่ยวกับ</button>
+  <div className="App">
+    <div className="center">
+      <img src={logo} alt="Logo" className="image" />
+      <button 
+        onClick={() => setCurrentPage('st')}
+        className="button"
+      >
+        Welcome to the RobotLAB Thailand
+      </button>
     </div>
+  </div>
+
   );
 
   return (
     <>
-      <div>
-      </div>
       <div className="App">
-        <DataTable />
+        {/* {currentPage === 'home' && <DataTable />} */}
+        {currentPage === 'st' && <ST />}
       </div>
       <div>
         {currentPage === 'home' && <HomePage />}
-
+        {/* {currentPage === 'st'   && <HomePage />} */}
       </div>
-      {/* <div className="App">
-        <DataTablefull />
-      </div> */}
-      {/* <div className="App">
-        <testGetData />
-      </div> */}
-      <p className="read-the-docs">
-        {/* Click on the Vite and React logos to learn more */}
-      </p>
+      
+      
     </>
+
   )
 }
 
-export default App
+export default App;

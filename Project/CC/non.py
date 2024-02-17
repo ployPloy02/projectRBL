@@ -208,8 +208,8 @@ def testCount():
     
 
 if __name__ == '__main__':
-    ip = '192.168.3.13'
-    # ip = '172.20.10.5'
+    # ip = '192.168.3.13'
+    ip = '172.20.10.5'
     # app.run(debug=True,host='172.20.10.4',port=5000)
     app.run(debug=True,host=ip,port=8000)
     # app.run(debug=True)
