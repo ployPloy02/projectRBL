@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 function TestPage() {
     const navigate = useNavigate();
     const goToHomePage = () => navigate('/');
+
+    const [data, setData] = useState({});
+    const [count, setCount] = useState(0);
 
     const sendData = () => {
         const inputData = document.getElementById('inputData').value;
@@ -13,7 +16,7 @@ function TestPage() {
             "name": inputData
         };
 
-        axios.post('http://172.20.10.5:8000/findData', data)
+        axios.post('http://127.0.0.1:8000/findData', data)
             .then(response => {
                 console.log('Response:', response.data);
                 setData({
@@ -23,13 +26,12 @@ function TestPage() {
                     level: response.data[0][3],
                     course: response.data[0][4]
                 });
+                setCount(prevCount => prevCount + 1);
             })
             .catch(error => {
                 console.error('Error:', error);
             });
     };
-
-    const [data, setData] = useState({});
 
     return (
         <div>
@@ -37,6 +39,7 @@ function TestPage() {
             <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
             <input type="text" id="inputData" />
             <button onClick={sendData}>Submit</button>
+            <p>Count of Class: {10 - count}</p>
             <table className="table-container">
                 <thead>
                     <tr>

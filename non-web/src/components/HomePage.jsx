@@ -5,12 +5,10 @@ function HomePage() {
   const [count, setCount] = useState(0);
   const navigate = useNavigate();
 
-  // Function to programmatically navigate to the About page
   const goToAboutPage = () => navigate('/about');
-
-  // Function to programmatically navigate to the Data page
   const goToDataPage = () => navigate('/datatable');
   const goTofirstPage = () => navigate('/first');
+
 
   return (
     <div>
@@ -31,6 +29,7 @@ function HomePage() {
       <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> 
       <button onClick={goToDataPage} className="link-to-about">Go to data</button>
       <button onClick={goTofirstPage} className="link-to-about">Go to first</button>
+
     </div>
   );
 }

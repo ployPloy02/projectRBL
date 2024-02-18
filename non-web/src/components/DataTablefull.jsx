@@ -10,7 +10,7 @@ const DataTable = () => {
   const navigate = useNavigate();
   const goToHomePage = () => navigate('/');
   useEffect(() => {
-    axios.get('http://172.20.10.5:8000/log')
+    axios.get('http://127.0.0.1:8000/log')
       .then(response => {
         setData(response.data.data);
         setCount(response.data.data.length); // ตั้งค่าค่า Count
@@ -31,7 +31,7 @@ const DataTable = () => {
       
       <h2 style={{ display: 'table', margin: '0 auto' }}>TABLE</h2>
 
-      <p>Count of Class: {10 - count}</p>
+      {/* <p>Count of Class: {10 - count}</p> */}
       <table className="table-container"> {/* เพิ่ม className เพื่อใช้งาน CSS */}
         <thead>
           <tr>

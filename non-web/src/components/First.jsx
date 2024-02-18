@@ -12,13 +12,16 @@ function First() {
   const goToTestPage = () => navigate('/test');
 
   return (
-    <div>
+    <div className="first-container">
       <h2>First Page</h2>
-      <img src={logo} alt="Logo" style={{ width: '390px', height: '390px', marginTop: '-80px' }} />
-      <h2 style={{ marginLeft: '10px', marginTop: '-50px' }}>Welcome to the RobotLAB Thailand!</h2>
-      <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> 
-      <button onClick={goToDataPage} className="link-to-about">Go to data</button>
-      <button onClick={goToTestPage} className="link-to-about">Go to test</button>
+      <div className="image-container">
+        <img src={logo} alt="Logo" className="centered-image" />
+      </div>
+      <div className="button-container">
+        <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button>
+        <button onClick={goToDataPage} className="link-to-about">Go to Data</button>
+        <button onClick={goToTestPage} className="link-to-about">Go to Test</button>
+      </div>
     </div>
   );
 }

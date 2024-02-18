@@ -5,7 +5,7 @@ import AboutPage from './components/AboutPage'; // ตรวจสอบเส�
 import DataTablefull from './components/DataTablefull';
 import First from './components/First';
 import TestPage from './components/TestPage';
-
+import one from './components/one';
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/datatable" element={<DataTablefull/>}/>
         <Route path='/test' element={<TestPage/>}/>
+        <Route path="/one" element={<one/>} />
         {/* <Route path="/first" element={<First/>}/> */}
       </Routes>
     </Router>

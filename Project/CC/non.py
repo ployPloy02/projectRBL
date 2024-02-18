@@ -28,9 +28,9 @@ def getCheckOk():
 # Endpoint to fetch data from the database
 @app.route('/data', methods=['GET'])
 def get_data():
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('mydatabase.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM mytable")  # Replace 'your_table_name' with your actual table name
+    cursor.execute("SELECT * FROM Log")  # Replace 'your_table_name' with your actual table name
     rows = cursor.fetchall()
     conn.close()
 
@@ -42,7 +42,7 @@ def get_data():
             'column2': row[2],  
             'column3': row[3],
             'column4': row[4],
-            'column5': row[5],
+            # 'column5': row[5],
 
         }
         data_list.append(data_dict)
@@ -51,7 +51,7 @@ def get_data():
 
 @app.route('/log', methods=['GET'])
 def getLog():
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('mydatabase.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Log")  # Replace 'your_table_name' with your actual table name
     rows = cursor.fetchall()
@@ -130,7 +130,7 @@ def save_data():
         course = data.get('data').split(",")[3].split(":")[1]
         # card = data.get('card')
         # print(card)
-        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+        conn = sqlite3.connect('mydatabase.db')
         cursor = conn.cursor()
 
         # Check if the data already exists in the database
@@ -172,7 +172,7 @@ def save_data():
 #     date = datetime.datetime.now().strftime("%Y-%m-%d")
 #     name = request.args.get('name')
 #     print(name)
-#     conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+#     conn = sqlite3.connect('mydatabase.db')
 #     cursor = conn.cursor()
 #     cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
 #     rows = cursor.fetchall()
@@ -186,7 +186,7 @@ def findData():
     # date = datetime.datetime.now().strftime("%Y-%m-%d")
     # name = request.args.get('name')
     # print(name)
-    # conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    # conn = sqlite3.connect('mydatabase.db')
     # cursor = conn.cursor()
     # cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
     # rows = cursor.fetchall()
@@ -197,7 +197,7 @@ def findData():
     print(data)
     name = data.get('name')
     print(name)
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('mydatabase.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
     rows = cursor.fetchall()
@@ -214,7 +214,7 @@ def testSave():
     # cardID = request.args.get('cardID')
     response_data = {'data1': data1, 'data2': date}
 
-    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    conn = sqlite3.connect('mydatabase.db')
     cursor = conn.cursor()
     cursor.execute('INSERT INTO Log (Date, Name) VALUES (?, ?)', (date, data1))
     conn.commit()
@@ -227,7 +227,7 @@ def testSave():
 @app.route('/testCount', methods=['GET'])
 def testCount():
     try:
-        conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+        conn = sqlite3.connect('mydatabase.db')
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM mytable WHERE name = 'ploy'")
         data = cursor.fetchall()
@@ -259,7 +259,8 @@ def testCount():
 
 if __name__ == '__main__':
     # ip = '192.168.3.13'
-    ip = '172.20.10.5'
+    # ip = '188.166.191.51'
+    ip = '127.0.0.1'
     # app.run(debug=True,host='172.20.10.4',port=5000)
     app.run(debug=True,host=ip,port=8000)
     # app.run(debug=True)
