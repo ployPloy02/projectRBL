@@ -8,6 +8,7 @@ function HomePage() {
   const goToAboutPage = () => navigate('/about');
   const goToDataPage = () => navigate('/datatable');
   const goTofirstPage = () => navigate('/first');
+  const goToonePage = () => navigate('/one');
 
 
   return (
@@ -29,6 +30,7 @@ function HomePage() {
       <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> 
       <button onClick={goToDataPage} className="link-to-about">Go to data</button>
       <button onClick={goTofirstPage} className="link-to-about">Go to first</button>
+      <button onClick={goToonePage} className="link-to-about">Go to first</button>
 
     </div>
   );
