@@ -12,6 +12,15 @@ CORS(app)
 
 # app.config['JSONIFY_MIMETYPE'] = 'application/json'
 
+@app.route('/testRxData', methods=['POST'])
+def testRxData():
+    data = request.json
+    print(data)
+    name = data.get('name')
+    print(name)
+    return "Ok"
+
+
 @app.route('/checkOk',methods=['GET'])
 def getCheckOk():
     return "Ok"

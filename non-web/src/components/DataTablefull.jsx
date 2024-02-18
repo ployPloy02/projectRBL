@@ -58,7 +58,8 @@ const DataTable = () => {
       {/* <Link to="/">Go back to Home</Link> */}
       <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
     </div>
-    
+
+
   );
 };
 

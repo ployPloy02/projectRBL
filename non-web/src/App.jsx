@@ -4,6 +4,9 @@ import HomePage from './components/HomePage'; // ตรวจสอบเส้�
 import AboutPage from './components/AboutPage'; // ตรวจสอบเส้นทางไฟล์ให้ถูกต้อง
 import DataTablefull from './components/DataTablefull';
 import First from './components/First';
+import TestPage from './components/TestPage';
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
 
         <Route path="/about" element={<AboutPage />} />
         <Route path="/datatable" element={<DataTablefull/>}/>
+        <Route path='/test' element={<TestPage/>}/>
         {/* <Route path="/first" element={<First/>}/> */}
       </Routes>
     </Router>
