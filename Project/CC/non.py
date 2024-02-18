@@ -123,24 +123,26 @@ def save_data():
     try:
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         data = request.json
-        name = data.get('name').split(",")[0].split(":")[1]
-        # age = data.get('name').split(",")[0].split(":")[1]
-        # level = data.get('name').split(",")[0].split(":")[1]
-        course = data.get('name').split(",")[1].split(":")[1]
+        print(data)
+        name = data.get('data').split(",")[0].split(":")[1]
+        age = data.get('data').split(",")[1].split(":")[1]
+        level = data.get('data').split(",")[2].split(":")[1]
+        course = data.get('data').split(",")[3].split(":")[1]
         # card = data.get('card')
+        # print(card)
         conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
         cursor = conn.cursor()
 
         # Check if the data already exists in the database
-        cursor.execute('SELECT * FROM Log WHERE nickname = ? OR cours = ?', (name, course))
+        cursor.execute('SELECT * FROM Log WHERE Name = ? OR course = ?', (name, course))
         existing_data = cursor.fetchall()
 
         if existing_data:
             # If data already exists, delete all existing data and insert new data
-            cursor.execute('DELETE FROM Log WHERE nickname = ? OR cours = ?', (name, course))
+            cursor.execute('DELETE FROM Log WHERE Name = ? OR course = ?', (name, course))
 
 
-        cursor.execute('INSERT INTO Log (Date, nickname, cours) VALUES (?, ?, ?)', (date, name, course))
+        cursor.execute('INSERT INTO Log (Date, Name, course , Level , Age) VALUES (?, ?, ?,?,?)', (date, name, course,level,age))
         conn.commit()
         conn.close()
 
@@ -155,6 +157,7 @@ def save_data():
     
 #     date = datetime.datetime.now().strftime("%Y-%m-%d")
 #     data = request.json
+#     print(data)
 #     name = data.get('name').split(",")[0].split(":")[1]
 #     course = data.get('name').split(",")[1].split(":")[1]
 #     card = data.get('card')
@@ -162,6 +165,45 @@ def save_data():
 #     print(course)
 
 #     return "ok",200   
+
+# @app.route('/findData', methods=['GET'])
+# def findData():
+    
+#     date = datetime.datetime.now().strftime("%Y-%m-%d")
+#     name = request.args.get('name')
+#     print(name)
+#     conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+#     cursor = conn.cursor()
+#     cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
+#     rows = cursor.fetchall()
+#     conn.close()
+
+#     return jsonify(rows), 200
+
+@app.route('/findData', methods=['POST'])
+def findData():
+    
+    # date = datetime.datetime.now().strftime("%Y-%m-%d")
+    # name = request.args.get('name')
+    # print(name)
+    # conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    # cursor = conn.cursor()
+    # cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
+    # rows = cursor.fetchall()
+    # conn.close()
+    # return jsonify(rows), 200
+
+    data = request.json
+    print(data)
+    name = data.get('name')
+    print(name)
+    conn = sqlite3.connect('/Users/matikahunbumrung/Desktop/PloyRBL/projectRBL/Project/SQL/mydatabase.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Log WHERE Name = ?", (name,))
+    rows = cursor.fetchall()
+    conn.close()
+    return jsonify(rows), 200
+
 
 
 
@@ -190,7 +232,6 @@ def testCount():
         cursor.execute("SELECT * FROM mytable WHERE name = 'ploy'")
         data = cursor.fetchall()
         conn.close()
-
         if data:
             data_list = []
             for row in data:

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
@@ -9,22 +9,27 @@ function TestPage() {
     const sendData = () => {
         const inputData = document.getElementById('inputData').value;
 
-        // สร้าง object ที่จะส่งเป็น JSON
         const data = {
             "name": inputData
         };
 
-        // ใช้ Axios ส่งข้อมูล
-        axios.post('http://172.20.10.5:8000/testRxData', data)
+        axios.post('http://172.20.10.5:8000/findData', data)
             .then(response => {
                 console.log('Response:', response.data);
-                // ตัวอย่างการใช้งาน response ตอบกลับจากเซิร์ฟเวอร์
+                setData({
+                    date: response.data[0][0],
+                    name: response.data[0][1],
+                    age: response.data[0][2],
+                    level: response.data[0][3],
+                    course: response.data[0][4]
+                });
             })
             .catch(error => {
                 console.error('Error:', error);
-                // ตัวอย่างการใช้งาน error เมื่อเกิดข้อผิดพลาดในการส่งข้อมูล
             });
     };
+
+    const [data, setData] = useState({});
 
     return (
         <div>
@@ -32,6 +37,28 @@ function TestPage() {
             <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
             <input type="text" id="inputData" />
             <button onClick={sendData}>Submit</button>
+            <table className="table-container">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Level</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data && (
+                        <tr>
+                            <td>{data.date}</td>
+                            <td>{data.name}</td>
+                            <td>{data.age}</td>
+                            <td>{data.level}</td>
+                            <td>{data.course}</td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
         </div>
     );
 }
