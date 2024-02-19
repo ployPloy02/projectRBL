@@ -1,15 +1,29 @@
 h2 {
   text-align: center; /* ทำให้ข้อความตรงกลาง */
+  color: rgb(203, 20, 20);
 }
 
 
 .table-container {
-  width: 65rcap; 
+  width: 90rcap; 
   border-collapse: collapse; 
   border: 1px solid #ffffff; 
-  margin: 5%;
+  margin: 3%;
   
 }
+
+
+.image-aboutdata {
+  position: absolute; /* ให้ตำแหน่งเป็น absolute */
+  top: -10px; /* จัดให้อยู่ที่ด้านบน */
+  left: 30px; /* จัดให้อยู่ที่ด้านซ้าย */
+}
+
+.aboutdata-image {
+  width: 150px; /* กำหนดความกว้างของภาพ */
+  margin-top: 20px; /* เพิ่มระยะห่างด้านบนของภาพ */
+}
+
 
 
 /* กำหนดให้มุมด้านบนซ้ายของตารางเป็นโค้ง */
@@ -36,7 +50,6 @@ h2 {
   border: 1px solid #fff; /* กำหนดเส้นขอบของหัวของตารางและเซลล์ข้อมูลในตารางให้เป็นสีขาว */
   padding: 10px; /* เพิ่มระยะห่างระหว่างข้อความและเส้นขอบของเซลล์ */
   text-align: center; /* จัดข้อความไว้กึ่งกลางในเซลล์ */
-
 }
 
 
@@ -53,4 +66,39 @@ h2 {
   background-color: #F2F2F2; /* สลับสีของแถวแนวนอนให้เป็นสีเทาอ่อน */
 }
 
+.table-container th, .table-container td {
+  color: #6d6d6d; /* สีตัวอักษรเป็นสีเทาเข้ม */
+}
+
+.button-container {
+  display: flex; /* ใช้ Flexbox */
+  justify-content: flex-end; /* จัดให้ปุ่มอยู่ด้านขวา */
+  margin-top: 90px;
+}
+
+.button-container button {
+  margin-left: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+
+
+
+.link-to-aboutdata {
+  background-color: rgba(166, 166, 167, 0.713);
+  color: #525151;
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 800px;
+  display: flex; /* ใช้ Flexbox */
+  justify-content: flex-end; /* จัดให้ปุ่มอยู่ด้านขวา */
+  margin-top: 20px;
+}
+
+.link-to-aboutdata:hover {
+  background-color: #af1010;
+  color: white;
+}
 

@@ -10,18 +10,16 @@ function First() {
   const goToDataPage = () => navigate('/datatable');
   const goTofirstPage = () => navigate('/first');
   const goToTestPage = () => navigate('/test');
-  const goToonePage = () => navigate('/one');
 
   return (
     <div className="first-container">
-      <h2>First Page</h2>
       <div className="image-container">
         <img src={logo} alt="Logo" className="centered-image" />
       </div>
       <div className="button-container">
-        <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button>
-        <button onClick={goToDataPage} className="link-to-about">Go to Data</button>
-        <button onClick={goToTestPage} className="link-to-about">Go to Test</button>
+        {/* <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> */}
+        <button onClick={goToDataPage} className="link-to-about">Welcome to the RobotLAB Thailand!</button>
+        {/* <button onClick={goToTestPage} className="link-to-about">Go to Test</button> */}
       </div>
     </div>
   );

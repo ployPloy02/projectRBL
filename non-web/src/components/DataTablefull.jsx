@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Datatable.css'; 
 import { Link ,useNavigate} from 'react-router-dom';
+import logo from './images/rbl.jpeg'
 
 const DataTable = () => {
   const [data, setData] = useState([]);
@@ -9,6 +10,7 @@ const DataTable = () => {
   const [count, setCount] = useState(0); // เพิ่ม State สำหรับเก็บค่า Count
   const navigate = useNavigate();
   const goToHomePage = () => navigate('/');
+  const goToTestPage = () => navigate('/test');
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/log')
       .then(response => {
@@ -27,9 +29,10 @@ const DataTable = () => {
 
   return (
     <div>
-      <h2>DATA</h2>
-      
-      <h2 style={{ display: 'table', margin: '0 auto' }}>TABLE</h2>
+      <div className="image-aboutdata">
+        <img src={logo} alt="Logo" className="aboutdata-image" />
+      </div>
+      <h2 style={{ display: 'table', margin: '0 auto' }}>Table displaying student attendance.</h2>
 
       {/* <p>Count of Class: {10 - count}</p> */}
       <table className="table-container"> {/* เพิ่ม className เพื่อใช้งาน CSS */}
@@ -55,8 +58,7 @@ const DataTable = () => {
           ))}
         </tbody>
       </table>
-      {/* <Link to="/">Go back to Home</Link> */}
-      <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
+      <button onClick={goToTestPage} className="link-to-aboutdata">Go to search</button>
     </div>
 
 

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import './Test.css'; 
+import logo from './images/rbl.jpeg'
 
 function TestPage() {
     const navigate = useNavigate();
@@ -34,7 +36,11 @@ function TestPage() {
     };
 
     return (
-        <div>
+            <div>
+                <div className="image-aboutdata">
+            <img src={logo} alt="Logo" className="aboutdata-image" />
+            </div>
+            <h2 style={{ display: 'table', margin: '0 auto' }}>Table displaying student attendance.</h2>
             <h2>test</h2>
             <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
             <input type="text" id="inputData" />
