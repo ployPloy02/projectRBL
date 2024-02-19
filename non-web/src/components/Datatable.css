@@ -86,12 +86,12 @@ h2 {
   background-color: rgba(166, 166, 167, 0.713);
   color: #525151;
   font-size: 16px;
-  padding: 4px 10px;
+  padding: 7px 15px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 800px;
+  margin-left: 450px;
   display: flex; /* ใช้ Flexbox */
   justify-content: flex-end; /* จัดให้ปุ่มอยู่ด้านขวา */
   margin-top: 20px;

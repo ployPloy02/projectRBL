@@ -1,0 +1,91 @@
+/* body {
+    background-image: url('./images/rbl3.jpeg');
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    background-color: rgba(59, 55, 55, 0.851); 
+} */
+
+
+
+
+.table-container {
+    width: 90rcap; 
+    border-collapse: collapse; 
+    border: 1px solid #ffffff; 
+    margin: 3 auto;
+}
+  
+.test-test {
+    text-align: right;
+    color: rgb(175, 37, 37);
+    margin-right: 10px;
+    margin-bottom: -15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: 90px;
+}
+
+#inputData {
+    padding: 2px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    background-color: #e0ddddb1;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: -30px;
+}
+
+
+#inputData:focus {
+    outline: none;
+    border-color: #6b6b6be5;
+}
+
+.submit-button {
+    padding: 6px 17px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #bd2525;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    margin-bottom: -30px;
+}
+
+
+.submit-button:hover {
+    background-color: #454647;
+}
+
+
+.link-to-aboutest {
+    background-color: rgba(166, 166, 167, 0.713);
+    color: #525151;
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 200px; /* ขยับปุ่มขึ้นมาใกล้กับตาราง */
+    display: block; /* ใช้ display: block เพื่อให้ margin: auto; ทำงาน */
+    margin-bottom: -200px;
+}
+
+.link-to-aboutest:hover {
+    background-color: #af1010;
+    color: white;
+}
+
+
+
+
+
+
