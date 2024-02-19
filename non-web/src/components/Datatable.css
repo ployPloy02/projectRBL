@@ -15,8 +15,8 @@ h2 {
 
 .image-aboutdata {
   position: absolute; /* ให้ตำแหน่งเป็น absolute */
-  top: -10px; /* จัดให้อยู่ที่ด้านบน */
-  left: 30px; /* จัดให้อยู่ที่ด้านซ้าย */
+  top: -5px; /* จัดให้อยู่ที่ด้านบน */
+  left: 40px; /* จัดให้อยู่ที่ด้านซ้าย */
 }
 
 .aboutdata-image {
