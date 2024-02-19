@@ -30,7 +30,7 @@ function HomePage() {
       <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> 
       <button onClick={goToDataPage} className="link-to-about">Go to data</button>
       <button onClick={goTofirstPage} className="link-to-about">Go to first</button>
-      <button onClick={goToonePage} className="link-to-about">Go to first</button>
+      <button onClick={goToonePage} className="link-to-about">Go to one</button>
 
     </div>
   );

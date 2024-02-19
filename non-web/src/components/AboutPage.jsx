@@ -14,7 +14,6 @@ function AboutPage() {
       <button onClick={goToHomePage} className="link-to-about">Go back to Home</button>
       <button onClick={goToDataPage} className="link-to-about">Go to data</button>
       <button onClick={goToonePage} className="link-to-about">Go to one</button>
-      
 
     </div>
   );

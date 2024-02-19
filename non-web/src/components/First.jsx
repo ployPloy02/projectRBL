@@ -10,6 +10,7 @@ function First() {
   const goToDataPage = () => navigate('/datatable');
   const goTofirstPage = () => navigate('/first');
   const goToTestPage = () => navigate('/test');
+  const goToonePage = () => navigate('/one');
 
   return (
     <div className="first-container">
