@@ -17,12 +17,10 @@ function First() {
         <img src={logo} alt="Logo" className="centered-image" />
       </div>
       <div className="button-container">
-        {/* <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> */}
         <button onClick={goToDataPage} className="link-to-about">Welcome to the RobotLAB Thailand!</button>
-        {/* <button onClick={goToTestPage} className="link-to-about">Go to Test</button> */}
       </div>
     </div>
   );
-}
+}แ
 
 export default First;

@@ -41,10 +41,7 @@ function TestPage() {
                 <div className="image-aboutdata">
             <img src={logo} alt="Logo" className="aboutdata-image" />
             </div>
-            {/* <h2 style={{ display: 'table', margin: '0 auto' }}>Table displaying student attendance.</h2> */}
-            
             <div className="button-container">
-              {/* <button onClick={goToHomePage} className="link-to-another">Go back to Main</button> */}
               <button onClick={goToDataPage} className="link-to-aboutest">Go back to Home</button>
             </div>
 

@@ -23,10 +23,6 @@ function HomePage() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      {/* Using Link for navigation */}
-      {/* <Link to="/about" className="link-to-about">Go to About Page</Link>
-      <Link to="/datatable" className="link-to-about">Go to data</Link> */}
-      {/* Using buttons for navigation */}
       <button onClick={goToAboutPage} className="link-to-about">Go to About Page</button> 
       <button onClick={goToDataPage} className="link-to-about">Go to data</button>
       <button onClick={goTofirstPage} className="link-to-about">Go to first</button>

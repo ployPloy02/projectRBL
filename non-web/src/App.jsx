@@ -4,10 +4,10 @@ import HomePage from './components/HomePage'; // ตรวจสอบเส้�
 import AboutPage from './components/AboutPage'; // ตรวจสอบเส้นทางไฟล์ให้ถูกต้อง
 import DataTablefull from './components/DataTablefull';
 import First from './components/First';
-import TestPage from './components/TestPage';
 import OnePage from './components/one';
 import TwoPage from './components/two';
-import ThreePage from './components/Three';
+import TestPage from './components/TestPage';
+
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
         <Route path='/test' element={<TestPage/>}/>
         <Route path="/one" element={<OnePage/>}/>
         <Route path='/two' element={TwoPage}/>
-        <Route path='/Three' element={ThreePage}/>
         {/* <Route path="/first" element={<First/>}/> */}
       </Routes>
     </Router>

@@ -7,7 +7,7 @@ import logo from './images/rbl.jpeg'
 const DataTable = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [count, setCount] = useState(0); // เพิ่ม State สำหรับเก็บค่า Count
+  const [count, setCount] = useState(0); 
   const navigate = useNavigate();
   const goToHomePage = () => navigate('/');
   const goToTestPage = () => navigate('/test');
@@ -15,7 +15,7 @@ const DataTable = () => {
     axios.get('http://127.0.0.1:8000/log')
       .then(response => {
         setData(response.data.data);
-        setCount(response.data.data.length); // ตั้งค่าค่า Count
+        setCount(response.data.data.length); 
       })
       .catch(error => {
         console.error('เกิดข้อผิดพลาดในการดึงข้อมูล:', error);
@@ -34,8 +34,7 @@ const DataTable = () => {
       </div>
       <h2 style={{ display: 'table', margin: '0 auto' }}>Table displaying student attendance.</h2>
 
-      {/* <p>Count of Class: {10 - count}</p> */}
-      <table className="table-container"> {/* เพิ่ม className เพื่อใช้งาน CSS */}
+      <table className="table-container"> 
         <thead>
           <tr>
             <th>Date</th>
@@ -53,7 +52,6 @@ const DataTable = () => {
               <td>{item.column2}</td>
               <td>{item.column3}</td>
               <td>{item.column4 || 'N/A'}</td>
-              {/* <td>{item.column5 || 'N/A'}</td> */}
             </tr>
           ))}
         </tbody>

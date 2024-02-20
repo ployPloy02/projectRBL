@@ -1,13 +1,3 @@
-/* body {
-    background-image: url('./images/rbl3.jpeg');
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-color: rgba(59, 55, 55, 0.851); 
-} */
-
-
-
-
 .table-container {
     width: 90rcap; 
     border-collapse: collapse; 
@@ -74,8 +64,8 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 200px; /* ขยับปุ่มขึ้นมาใกล้กับตาราง */
-    display: block; /* ใช้ display: block เพื่อให้ margin: auto; ทำงาน */
+    margin-top: 200px; 
+    display: block; 
     margin-bottom: -200px;
 }
 
